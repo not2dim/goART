@@ -250,10 +250,10 @@ func (n48 *node48) findChild(b byte) *artNode {
 
 func (n48 *node48) addChild(b byte, child artNode) artNode {
 	if n48.childSize+1 <= childSizeMaxNode48 {
-		for i, child := range n48.children {
-			if child == nil {
+		for i, child0 := range n48.children {
+			if child0 == nil {
 				n48.childIndex[b] = 1 + uint8(i)
-				n48.children[i] = child
+				n48.children[i] = &child
 				break
 			}
 		}
